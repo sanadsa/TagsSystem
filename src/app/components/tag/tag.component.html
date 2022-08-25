@@ -1,0 +1,12 @@
+<div class="tag">
+  <input class="label" (click)="clickTag()" [(ngModel)]="label" [class.clickable]="isClickable()" [value]="tag.label"/>
+  <button [disabled]="label === tag.label" (click)="updateTag(tag)">update</button>
+  <div *ngIf="tag.isExpanded">
+    <div class="downArrow">&#8595;</div>
+    <div class="children">
+      <div *ngFor="let childTag of tag.children">
+        <app-tag [currentLevel]="currentLevel + 1" [tag]="childTag"></app-tag>
+      </div>
+    </div>
+  </div>
+</div>

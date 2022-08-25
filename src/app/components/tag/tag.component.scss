@@ -1,0 +1,24 @@
+.tag {
+  margin-bottom: 15px;
+
+  .label {
+    border: 1px black solid;
+    font-size: 35px;
+    width: 150px;
+    text-align: center;
+    background-color: #cbe7ff;
+
+    &.clickable {
+      cursor: pointer;
+      border: 2px rgb(8, 156, 255) solid;
+    }
+  }
+
+  .children {
+    display: flex;
+  }
+
+  .downArrow {
+    font-size: 80px;
+  }
+}
